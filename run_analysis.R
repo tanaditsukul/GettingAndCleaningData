@@ -47,5 +47,5 @@ alldata <- cbind(xdata, ydata, subjectdata)
 Ncol<-ncol(alldata)-2
 tidydata <- ddply(alldata, .(subject, activity), function(x) colMeans(x[, 1:Ncol]))
 
-write.table(tidydata, "tidydata.txt", row.names=TRUE,sep='\t')
+write.table(tidydata, "tidydata.txt", row.names=FALSE)
 
